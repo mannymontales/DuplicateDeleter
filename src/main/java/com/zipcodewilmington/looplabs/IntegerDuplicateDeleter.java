@@ -65,16 +65,6 @@ public final class IntegerDuplicateDeleter extends DuplicateDeleter<Integer> {
         }
         return newArray;
     }
-    //int[] newArr = new int[array.length - count];
-//                    for (int k = 0; k < newArr.length; k++){
-//        newArr[k] = array[count];
-//        count++;
-//        //i = i + count;
-//    }
-//
-//                for (int l = 0; l < newArr.length; l++){
-//        a[l] = newArr[l];
-//    }
 
     @Override
     public Integer[] removeDuplicatesExactly(int exactNumberOfDuplications) {
@@ -91,7 +81,7 @@ public final class IntegerDuplicateDeleter extends DuplicateDeleter<Integer> {
                 }
             }
 
-            if (count >= exactNumberOfDuplications){
+            if (count == exactNumberOfDuplications){
                 setsOfDups++;
             }
         }
@@ -101,6 +91,7 @@ public final class IntegerDuplicateDeleter extends DuplicateDeleter<Integer> {
 
         for (int i = 0; i < array.length; i++){
             int count = 0;
+            System.out.println(array[i]);
 
             for (int j = 0; j < array.length; j++){
                 if (array[i].equals(array[j])){
@@ -121,6 +112,7 @@ public final class IntegerDuplicateDeleter extends DuplicateDeleter<Integer> {
         int i = 0;
         for (int value : a) {
             newArray[i++] = Integer.valueOf(value);
+
         }
         return newArray;
 
